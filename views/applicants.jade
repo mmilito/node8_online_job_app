@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+
+			ul#applications.list-unstyled Names
+				for person in applicantList
+					li= person.name
+						a(href= "/remove/#{person._id}") REMOVE
